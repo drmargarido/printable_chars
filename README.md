@@ -1,6 +1,6 @@
 # Printable Chars
 
-Super simple lib for getting the printable ascii characters of a lua string
+Simple lib for getting the printable ascii characters of a lua string
 
 ## Example Usage
 
