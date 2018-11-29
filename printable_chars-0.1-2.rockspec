@@ -1,8 +1,8 @@
 package = "printable_chars"
-version = "0.1"
+version = "0.1-2"
 source = {
-   url = "https://github.com/drmargarido/printable_chars.git",
-   tag = "v0.1",
+   url = "git://github.com/drmargarido/printable_chars",
+   tag = "v0.1"
 }
 description = {
    homepage = "https://github.com/drmargarido/printable_chars.git",
