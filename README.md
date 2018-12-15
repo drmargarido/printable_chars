@@ -9,12 +9,12 @@ local printable_chars = require "printable_chars".printable_chars
 
 -- Print random characters from urandom
 local urandom = io:open("/dev/urandom", "r")
-print(printable_chars(urandom:read(32)))
+print(printable_chars(urandom:read(32)))                           -- U&0j]s7\]r9\ (Example)
 urandom:close()
 
 -- Validate fields
 local raw_password = "çç~asdasdasd  \n\n\r\tasdáá"
-if raw_password ~= printable_chars(raw_password) then
+if raw_password ~= printable_chars(raw_password) then              -- True
     print("Do not use invalid ascii characters in the password")
 end
 ```
