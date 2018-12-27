@@ -1,5 +1,5 @@
 package = "printable_chars"
-version = "0.1-3"
+version = "0.1-4"
 source = {
    url = "git://github.com/drmargarido/printable_chars",
    tag = "v0.1-3"
