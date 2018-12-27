@@ -1,6 +1,7 @@
 local printable_chars = require "printable_chars".printable_chars
 local is_char_printable = require "printable_chars".is_char_printable
 local set_spaces_allowed = require "printable_chars".set_spaces_allowed
+local blacklist_chars = require "printable_chars".blacklist_chars
 
 -- printable_chars
 -- Char 9 is the TAB
@@ -40,3 +41,9 @@ local raw_password = "çç~asdasdasd  \n\n\r\tasdáá"
 if raw_password ~= printable_chars(raw_password) then   -- True
     print("Do not use invalid ascii characters in the password")
 end
+
+-- Blacklist chars
+local test_string = "çabc.sd?sd"
+print(printable_chars(test_string))                     -- abc.sd?sd
+blacklist_chars({"?", "."})
+print(printable_chars(test_string))                     -- abcsdsd
