@@ -19,13 +19,26 @@ if raw_password ~= printable_chars(raw_password) then              -- True
 end
 ```
 
-* Check [example.lua](example.lua) file for more examples
+Check [spec](spec/app_spec.lua) file for more examples
 
 ## Available methods
 
 * printable_chars - Returns string with just the ascii printable characters
 * is_char_printable - Checks if a char is printable
 * set_spaces_allowed - Sets the lib to accept special space chars as printable chars
+* blacklist_chars - Blacklists a list of specific chars so the next printable_chars calls will ignore them
+
+## Testing
+
+To run the unit tests we need the busted lib.
+```sh
+luarocks install busted
+```
+
+After that just run the following command.
+```sh
+busted spec
+```
 
 ## Instalation
 
